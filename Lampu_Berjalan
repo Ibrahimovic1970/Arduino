@@ -1,0 +1,118 @@
+const int buttonPin = 11;
+const int buttonPin1 = 12;
+const int ledPin = 2;
+const int ledPin1 = 3;
+const int ledPin2 = 4;
+const int ledPin3 = 5;
+const int ledPin4 = 6;
+const int ledPin5 = 7;
+const int ledDelay = 300;
+
+void setup() {
+  pinMode(buttonPin, INPUT_PULLUP);
+  pinMode(buttonPin1, INPUT_PULLUP);
+  pinMode(ledPin, OUTPUT);
+  pinMode(ledPin1, OUTPUT);
+  pinMode(ledPin2, OUTPUT);
+  pinMode(ledPin3, OUTPUT);
+  pinMode(ledPin4, OUTPUT);
+  pinMode(ledPin5, OUTPUT);
+}
+
+void loop() {
+  if (digitalRead(buttonPin) == LOW) {
+    // Menyalakan LED dari kiri ke kanan dan kembali ke kiri
+    digitalWrite(ledPin, HIGH);
+    delay(ledDelay);
+    digitalWrite(ledPin, LOW);
+    
+    digitalWrite(ledPin1, HIGH);
+    delay(ledDelay);
+    digitalWrite(ledPin1, LOW);
+    
+    digitalWrite(ledPin2, HIGH);
+    delay(ledDelay);
+    digitalWrite(ledPin2, LOW);
+    
+    digitalWrite(ledPin3, HIGH);
+    delay(ledDelay);
+    digitalWrite(ledPin3, LOW);
+    
+    digitalWrite(ledPin4, HIGH);
+    delay(ledDelay);
+    digitalWrite(ledPin4, LOW);
+    
+    digitalWrite(ledPin5, HIGH);
+    delay(ledDelay);
+    digitalWrite(ledPin5, LOW);
+    
+    // Kembali ke kiri
+    digitalWrite(ledPin4, HIGH);
+    delay(ledDelay);
+    digitalWrite(ledPin4, LOW);
+    
+    digitalWrite(ledPin3, HIGH);
+    delay(ledDelay);
+    digitalWrite(ledPin3, LOW);
+    
+    digitalWrite(ledPin2, HIGH);
+    delay(ledDelay);
+    digitalWrite(ledPin2, LOW);
+    
+    digitalWrite(ledPin1, HIGH);
+    delay(ledDelay);
+    digitalWrite(ledPin1, LOW);
+    
+    digitalWrite(ledPin, HIGH);
+    delay(ledDelay);
+    digitalWrite(ledPin, LOW);
+  }
+
+  if (digitalRead(buttonPin1) == LOW) {
+    // Menyalakan LED dari kanan ke kiri dan kembali ke kanan
+    digitalWrite(ledPin5, HIGH);
+    delay(ledDelay);
+    digitalWrite(ledPin5, LOW);
+    
+    digitalWrite(ledPin4, HIGH);
+    delay(ledDelay);
+    digitalWrite(ledPin4, LOW);
+    
+    digitalWrite(ledPin3, HIGH);
+    delay(ledDelay);
+    digitalWrite(ledPin3, LOW);
+    
+    digitalWrite(ledPin2, HIGH);
+    delay(ledDelay);
+    digitalWrite(ledPin2, LOW);
+    
+    digitalWrite(ledPin1, HIGH);
+    delay(ledDelay);
+    digitalWrite(ledPin1, LOW);
+    
+    digitalWrite(ledPin, HIGH);
+    delay(ledDelay);
+    digitalWrite(ledPin, LOW);
+    
+    // Kembali ke kanan
+    digitalWrite(ledPin1, HIGH);
+    delay(ledDelay);
+    digitalWrite(ledPin1, LOW);
+    
+    digitalWrite(ledPin2, HIGH);
+    delay(ledDelay);
+    digitalWrite(ledPin2, LOW);
+    
+    digitalWrite(ledPin3, HIGH);
+    delay(ledDelay);
+    digitalWrite(ledPin3, LOW);
+    
+    digitalWrite(ledPin4, HIGH);
+    delay(ledDelay);
+    digitalWrite(ledPin4, LOW);
+    
+    digitalWrite(ledPin5, HIGH);
+    delay(ledDelay);
+    digitalWrite(ledPin5, LOW);
+  }
+}
